@@ -17,6 +17,10 @@ const PlantPage = () => {
     setSearchTerm(term.toLowerCase());
   };
 
+  const filteredPlants = plants.filter((plant) =>
+    plant.name.toLowerCase().includes(searchTerm)
+  );
+  
   return (
     <main>
       <Search handleSearch={handleSearch} />

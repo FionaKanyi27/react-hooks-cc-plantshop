@@ -3,7 +3,7 @@ import React from "react";
 const Search = ({ handleSearch }) => {
   const handleInputChange = (e) => {
     handleSearch(e.target.value);
-  }
+  };
   
   return (
     <div className="searchbar">

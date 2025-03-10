@@ -22,7 +22,7 @@ const handleSubmit = (e) => {
    body: JSON.stringify(formData),
   })
   .then((response)=> response.json())
-  .then((newplant) => setPlants([...plants, newPlants]));
+  .then((newplant) => setPlants([...plants, newplant]));
 };
 
   return (

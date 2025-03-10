@@ -30,6 +30,14 @@ const PlantCard = ({ plant, plants, setPlants }) => {
     });
   };
 
+  const handleDelete = () => {
+    fetch(`http://localhost:6001/plants/${plant.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      setPlants(plants.filter((p) => p.id !== plant.id));
+    });
+  };  
+
   return (
     <li data-testid="plant-item">
       <h4>{plant.name}</h4>
